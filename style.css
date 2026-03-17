@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mandali&display=swap");
+
+:root {
+  --primary-color: #00a3e0;
+  --bg-color: #f0f8ff;
+  --card-bg: #ffffff;
+  --text-color: #333333;
+  --border-color: #dddddd;
+}
+body {
+  font-family: "Mandali", "Kosugi Maru", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100svh - 60px);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.container {
+  width: 90%;
+  max-width: 600px;
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+h3 {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 5px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.history-card {
+  margin-bottom: 20px;
+}
+ul#history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+ul#history-list li {
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.9rem;
+}
+ul#history-list li:last-child {
+  border-bottom: none;
+}
+ul#history-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.category-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.category-group label {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid var(--border-color);
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+.category-group label:hover {
+  background-color: #eef9ff;
+  border-color: var(--primary-color);
+}
+.category-group input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.2s ease;
+}
+.category-group input[type="checkbox"]:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#ime-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 15px;
+}
+
+#download-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+#download-btn:hover {
+  background-color: #008cc2;
+}

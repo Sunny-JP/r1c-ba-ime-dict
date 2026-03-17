@@ -2,31 +2,37 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <title>ブルアカIME辞書</title>
+    <title>ブルーアーカイブ IME辞書ダウンローダ</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>ブルアカIME辞書ダウンロード</h1>
+    <div class="container">
+      <h1>ブルーアーカイブ <wbr />IME辞書ダウンローダ</h1>
 
-    <div style="background: #f4f4f4; padding: 10px; margin-bottom: 20px">
-      <h3>最新のアップデート履歴</h3>
-      <ul id="history-list"></ul>
+      <div class="history-card">
+        <h3>最新のアップデート履歴</h3>
+        <ul id="history-list"></ul>
+      </div>
+
+      <div class="download-card">
+        <h3>1. カテゴリ選択</h3>
+        <div class="category-group">
+          <label><input type="checkbox" value="characters" class="category" /> <span>生徒名</span></label>
+          <label><input type="checkbox" value="schools" class="category" /> <span>学校・部活名</span></label>
+        </div>
+
+        <h3>2. IME選択</h3>
+        <select id="ime-select">
+          <option value="google">Google日本語入力 / Gboard</option>
+          <option value="ms">Microsoft IME</option>
+          <option value="atok">ATOK</option>
+          <option value="apple">macOS / iOS</option>
+        </select>
+
+        <h3>3. ダウンロード</h3>
+        <button id="download-btn">辞書を作成して保存</button>
+      </div>
     </div>
-
-    <h3>1. カテゴリ選択</h3>
-    <label><input type="checkbox" value="characters" class="category" /> 生徒名</label>
-    <label><input type="checkbox" value="schools" class="category" /> 学校・部活名</label>
-
-    <h3>2. IME選択</h3>
-    <select id="ime-select">
-      <option value="google">Google / Gboard</option>
-      <option value="ms">Microsoft IME</option>
-      <option value="atok">ATOK</option>
-      <option value="apple">macOS / iOS</option>
-    </select>
-
-    <h3>3. ダウンロード</h3>
-    <button id="download-btn">辞書を作成して保存</button>
-
     <script src="script.js"></script>
   </body>
 </html>
