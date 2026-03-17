@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function fetchHistory() {
-  const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/commits?path=data&per_page=5`;
+  const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/commits`;
 
   try {
     const res = await fetch(url);
