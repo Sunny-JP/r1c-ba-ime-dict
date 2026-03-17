@@ -35,7 +35,7 @@ async function generateDict() {
   let combined = [];
 
   for (const cat of selected) {
-    const url = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${BRANCH}/data/${cat}.csv`;
+    const url = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/refs/heads/${BRANCH}/data/${cat}.csv`;
     const res = await fetch(url);
     if (res.ok) {
       const text = await res.text();
