@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ブルアカIME辞書</title>
+  </head>
+  <body>
+    <h1>ブルアカIME辞書ダウンロード</h1>
+
+    <div style="background: #f4f4f4; padding: 10px; margin-bottom: 20px">
+      <h3>最新のアップデート履歴</h3>
+      <ul id="history-list"></ul>
+    </div>
+
+    <h3>1. カテゴリ選択</h3>
+    <label><input type="checkbox" value="characters" class="category" /> 生徒名</label>
+    <label><input type="checkbox" value="schools" class="category" /> 学校・部活名</label>
+
+    <h3>2. IME選択</h3>
+    <select id="ime-select">
+      <option value="google">Google / Gboard</option>
+      <option value="ms">Microsoft IME</option>
+      <option value="atok">ATOK</option>
+      <option value="apple">macOS / iOS</option>
+    </select>
+
+    <h3>3. ダウンロード</h3>
+    <button id="download-btn">辞書を作成して保存</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
