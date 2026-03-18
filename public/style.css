@@ -1,28 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Mandali&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mandali&text=0123456789&display=swap");
 
 :root {
+  --font-base: "Mandali", "Kosugi Maru", sans-serif;
   --primary-color: #00a3e0;
   --bg-color: #f0f8ff;
   --card-bg: #ffffff;
   --text-color: #333333;
   --border-color: #dddddd;
 }
+
 body {
-  font-family: "Mandali", "Kosugi Maru", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: var(--font-base);
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-weight: 400;
-  font-style: normal;
-  margin: 0;
-  padding: 30px;
+  margin: 10px;
+  padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: calc(100svh - 60px);
   word-break: keep-all;
   overflow-wrap: anywhere;
+  box-sizing: border-box;
 }
+
 .container {
   width: 90%;
   max-width: 600px;
@@ -30,14 +32,18 @@ body {
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 h1 {
   color: var(--primary-color);
   text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 30px;
+  font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.4;
 }
+
 h3 {
   color: var(--primary-color);
   border-bottom: 2px solid var(--primary-color);
@@ -50,6 +56,7 @@ h3 {
 .history-card {
   margin-bottom: 20px;
 }
+
 ul#history-list {
   list-style: none;
   padding: 0;
@@ -58,16 +65,17 @@ ul#history-list {
   border-radius: 8px;
   background-color: #fafafa;
 }
+
 ul#history-list li {
-  padding: 10px 15px;
+  padding: 4px 10px;
   border-bottom: 1px solid var(--border-color);
   font-size: 0.9rem;
+  line-height: 1.4;
+  word-break: break-all;
 }
+
 ul#history-list li:last-child {
   border-bottom: none;
-}
-ul#history-list li:hover {
-  background-color: #f0f0f0;
 }
 
 .category-group {
@@ -76,26 +84,31 @@ ul#history-list li:hover {
   gap: 10px;
   margin-bottom: 15px;
 }
+
 .category-group label {
   display: flex;
   align-items: center;
   background-color: #f9f9f9;
   border: 1px solid var(--border-color);
-  padding: 8px 15px;
+  padding: 6px 10px;
   border-radius: 20px;
   cursor: pointer;
   font-size: 0.95rem;
   transition: all 0.2s ease;
+  user-select: none;
 }
-.category-group label:hover {
+
+.category-group label:hover,
+#ime-select:hover {
   background-color: #eef9ff;
   border-color: var(--primary-color);
 }
+
 .category-group input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   margin-right: 8px;
   border: 2px solid var(--border-color);
   border-radius: 4px;
@@ -105,6 +118,7 @@ ul#history-list li:hover {
   vertical-align: middle;
   transition: all 0.2s ease;
 }
+
 .category-group input[type="checkbox"]:checked {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
@@ -116,22 +130,24 @@ ul#history-list li:hover {
 
 #ime-select {
   width: 100%;
-  padding: 10px;
+  padding: 12px 10px;
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  background-color: #fff;
+  background-color: #f9f9f9;
   font-size: 1rem;
-  margin-bottom: 20px;
   appearance: none;
   background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 15px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  user-select: none;
 }
 
 #download-btn {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   background-color: var(--primary-color);
   color: white;
   border: none;
@@ -140,7 +156,9 @@ ul#history-list li:hover {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  box-sizing: border-box;
 }
+
 #download-btn:hover {
   background-color: #008cc2;
 }
